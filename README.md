@@ -24,8 +24,9 @@ Java versions currently provided are:
 * Openjdk-8
 
 Maven versions currently provided are:
-* maven-3.3.3
+* maven-3.2.5
 * maven-3.3.9
+* maven-3.5.0
 
 Installation
 ---------------
@@ -115,9 +116,9 @@ Image version structure
 2. a dash "-"
 3. Java version - jdk7
 4. a dash "-"
-5. Maven version - mvn3.3.3
+5. Maven version - mvn3.2.5
 
-Example: `sarcouy/s2itomcat:8-jdk8-mvn3.3.3`
+Example: `sarcouy/s2itomcat:8-jdk8-mvn3.2.5`
 Environment variables
 ---------------------
 To set environment variables, you can place them as a key value pair into a `.sti/environment` 
