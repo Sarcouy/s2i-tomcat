@@ -37,8 +37,6 @@ RUN INSTALL_PKGS="tar unzip bc which lsof $JAVA" && \
 # Add s2i tomcat customizations
 ADD ./contrib/settings.xml $HOME/.m2/
 
-
-
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 

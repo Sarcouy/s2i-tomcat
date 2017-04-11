@@ -7,18 +7,18 @@ MAINTAINER Sarcouy <sarcouy@protonmail.com>
 
 EXPOSE 8080
 
-ENV TOMCAT_VERSION=6.0.53 \
-    TOMCAT_MAJOR=6 \
-    MAVEN_VERSION=3.3.9 \
-    TOMCAT_DISPLAY_VERSION=6 \
+ENV TOMCAT_VERSION=8.0.43 \
+    TOMCAT_MAJOR=8 \
+    MAVEN_VERSION=3.5.0 \
+    TOMCAT_DISPLAY_VERSION=8 \
     CATALINA_HOME=/tomcat \
-    JAVA="java-1.7.0-openjdk java-1.7.0-openjdk-devel" \
+    JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
     JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 
 
-LABEL io.k8s.description="Platform for building and running JEE applications on Apache-Tomcat 6.0.53" \
-      io.k8s.display-name="Apache-Tomcat 6.0.53" \
+LABEL io.k8s.description="Platform for building and running JEE applications on Apache-Tomcat 8.0.43" \
+      io.k8s.display-name="Apache-Tomcat 8.0.43" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,tomcat,tomcat6" \
+      io.openshift.tags="builder,tomcat,tomcat8" \
       io.openshift.s2i.destination="/opt/s2i/destination"
 
 # Install Maven, Tomcat, Java

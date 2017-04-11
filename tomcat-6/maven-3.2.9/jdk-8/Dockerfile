@@ -9,10 +9,10 @@ EXPOSE 8080
 
 ENV TOMCAT_VERSION=6.0.53 \
     TOMCAT_MAJOR=6 \
-    MAVEN_VERSION=3.3.9 \
+    MAVEN_VERSION=3.2.9 \
     TOMCAT_DISPLAY_VERSION=6 \
     CATALINA_HOME=/tomcat \
-    JAVA="java-1.7.0-openjdk java-1.7.0-openjdk-devel" \
+    JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
     JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 
 
 LABEL io.k8s.description="Platform for building and running JEE applications on Apache-Tomcat 6.0.53" \
