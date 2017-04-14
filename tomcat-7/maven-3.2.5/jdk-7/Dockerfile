@@ -13,7 +13,8 @@ ENV TOMCAT_VERSION=7.0.77 \
     TOMCAT_DISPLAY_VERSION=7 \
     CATALINA_HOME=/tomcat \
     JAVA="java-1.7.0-openjdk java-1.7.0-openjdk-devel" \
-    JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 
+    JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 \
+    POM_PATH=.
 
 LABEL io.k8s.description="Platform for building and running JEE applications on Apache-Tomcat 7.0.77" \
       io.k8s.display-name="Apache-Tomcat 7.0.77" \
@@ -41,7 +42,7 @@ ADD ./contrib/settings.xml $HOME/.m2/
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 RUN chown -R 1001:0 /tomcat && chown -R 1001:0 $HOME && \
-    chmod -R ug+rw /tomcat && \
+    chmod -R ug+rwx /tomcat && \
     chmod -R g+rw /opt/s2i/destination
 
 USER 1001

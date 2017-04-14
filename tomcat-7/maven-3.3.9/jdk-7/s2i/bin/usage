@@ -16,6 +16,8 @@ Details:
 If a pom.xml is present in the source directory, the project is built with maven and the
 output war file defined with WAR_NAME will be copied into the Tomcat webapps directory.
 
+You can specify the path to the pom.xml file to build into your git repo with POM_PATH. (defaut set to .)
+
 If there is no pom.xml, but the war specified with WAR_NAME is found, it will be moved to tomcat webapps directory.
 
 The default Maven build arguments can be overridden by setting MAVEN_ARGS via the "--env" argument to S2I
@@ -23,7 +25,7 @@ default MAVEN_ARGS=clean install -DskipTests.
 The default Maven build arguments can be appended by setting MAVEN_ARGS_APPEND.
 
 If you set the "--env INCREMENTAL=true" to s2i, the sources are kept in the builded container
-to deploy to allow a reuse of sources and .m2 files, which is fast but the container can reach a several GiB size.
+to deploy to allow a reuse of sources and .m2 files, which is fast but the container can reach a size of several GiB.
 If you set the "--env INCREMENTAL=false" to s2i, the sources arn't kept in the builded container
 to deploy, it allows a more lightweight container for releases, but longer to build.
 

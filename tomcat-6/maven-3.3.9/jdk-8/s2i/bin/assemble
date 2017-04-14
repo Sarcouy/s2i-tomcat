@@ -33,7 +33,7 @@ chmod -R g+rw $LOCAL_SOURCE_DIR
 
 # If a pom.xml is present, this is a normal build scenario
 # so run maven.
-if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
+if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 
   if [ -z "$INCREMENTAL" ]; then
     export INCREMENTAL=false
@@ -45,7 +45,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
     restore_saved_artifacts
   fi
 
-  pushd $LOCAL_SOURCE_DIR &> /dev/null
+  pushd $LOCAL_SOURCE_DIR/$POM_PATH &> /dev/null
 
   if [ -z "$MAVEN_ARGS" ]; then
     #export MAVEN_ARGS="clean install -DskipTests"

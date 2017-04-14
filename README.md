@@ -34,13 +34,13 @@ Installation
 This image is available on DockerHub.  To download it, run:
 
 ```
-$ docker pull sarcouy/tomcat:$TOMCAT_VERSION-jdk$JDK_VERSION-mvn$MAVEN_VERSION
+$ docker pull sarcouy/s2i-tomcat:$TOMCAT_VERSION-jdk$JDK_VERSION-mvn$MAVEN_VERSION
 ```
 
 for example
 
 ```
-$ docker pull sarcouy/s2itomcat:8.5-jdk8-mvn3.3.9 
+$ docker pull sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 
 ```
 
 
@@ -51,14 +51,14 @@ using standalone [S2I](https://github.com/openshift/source-to-image) and then ru
 resulting image with [Docker](http://docker.io) execute:
 
 ```
-$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=false git://github.com/bparees/openshift-jee-sample sarcouy/s2itomcat:8.5-jdk8-maven3.3.9 tomcattest
+$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=false git://github.com/bparees/openshift-jee-sample sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
 $ docker run -p 8080:8080 tomcattest
 ```
 
 If you want to use an incremental build, don't forget -e `INCREMENTAL=true`
 
 ```
-$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=true git://github.com/bparees/openshift-jee-sample sarcouy/s2itomcat:8.5-jdk8-maven3.3.9 tomcattest
+$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=true --incremental git://github.com/bparees/openshift-jee-sample sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
 $ docker run -p 8080:8080 tomcattest
 ```
 
@@ -118,7 +118,7 @@ Image version structure
 4. a dash "-"
 5. Maven version - mvn3.2.5
 
-Example: `sarcouy/s2itomcat:8-jdk8-mvn3.2.5`
+Example: `sarcouy/s2i-tomcat:8-jdk8-mvn3.2.5`
 Environment variables
 ---------------------
 To set environment variables, you can place them as a key value pair into a `.sti/environment` 
@@ -135,13 +135,16 @@ file inside your source code repository or add -e FOO=BAR to `s2i build -e FOO=B
 * INCREMENTAL
 
     This is a boolean :
-    Set as "true" it avoid removing .m2 in between to build to allow lighter images. Must be used with `s2i build --incremental`
+    Set as "true" it avoid removing .m2 in between two builds (but that makes heavier images). Must be used with `s2i build --incremental`
     Default to false
 
 * WAR_NAME
 
     Name of the war file to move into webapps directory after maven build `WAR_NAME=myApp.war`
 
+* POM_PATH
+
+    Usefull for many pom.xml git repositories, specify the path to follow into the repo to find the pom file to use. default to `POM_PATH=.`
 
 Copyright
 --------------------
