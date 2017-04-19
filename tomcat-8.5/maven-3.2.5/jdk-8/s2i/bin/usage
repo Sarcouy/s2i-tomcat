@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cat <<EOF
-This is an S2I tomcat-8.5.13 running with java-8 compiling with maven-3.2.5 centos base image responsible for consuming a JEE project
+This is an S2I tomcat-8.5.14 running with java-8 compiling with maven-3.2.5 centos base image responsible for consuming a JEE project
 and deploying it onto Apache-Tomcat application server.
 To use it, install S2I: https://github.com/openshift/source-to-image.
 
