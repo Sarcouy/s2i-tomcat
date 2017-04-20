@@ -46,19 +46,19 @@ $ docker pull sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9
 
 Usage
 ---------------------
-To build a simple [jee application](https://github.com/bparees/openshift-jee-sample)
+To build a simple `java maven tomcat`
 using standalone [S2I](https://github.com/openshift/source-to-image) and then run the
 resulting image with [Docker](http://docker.io) execute:
 
 ```
-$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=false git://github.com/bparees/openshift-jee-sample sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
+$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=false git://github.com/example/openshift-tomcat-example sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
 $ docker run -p 8080:8080 tomcattest
 ```
 
 If you want to use an incremental build, don't forget -e `INCREMENTAL=true`
 
 ```
-$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=true --incremental git://github.com/bparees/openshift-jee-sample sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
+$ s2i build -e WAR_NAME=app.war -e INCREMENTAL=true --incremental git://github.com/example/openshift-tomcat-example sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
 $ docker run -p 8080:8080 tomcattest
 ```
 
@@ -93,7 +93,7 @@ Repository organization
                 *   **run**
 
                   This script is responsible for running the application, by using the
-                  Wildfly application server.
+                  Apache-tomcat application server.
 
                 *   **save-artifacts**
 

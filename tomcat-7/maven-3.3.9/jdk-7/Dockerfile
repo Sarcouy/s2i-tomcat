@@ -16,7 +16,7 @@ ENV TOMCAT_VERSION=7.0.77 \
     JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8 \
     POM_PATH=.
 
-LABEL io.k8s.description="Platform for building and running JEE applications on Apache-Tomcat 7.0.77" \
+LABEL io.k8s.description="Platform for building and running Java applications on Apache-Tomcat 7.0.77" \
       io.k8s.display-name="Apache-Tomcat 7.0.77" \
       io.openshift.expose-services="8080:http" \
       io.openshift.tags="builder,tomcat,tomcat7" \
