@@ -55,7 +55,7 @@ $ s2i build -e WAR_NAME=app.war -e INCREMENTAL=false git://github.com/example/op
 $ docker run -p 8080:8080 tomcattest
 ```
 
-If you want to use an incremental build, don't forget -e `INCREMENTAL=true`
+If you want to use an incremental build, `INCREMENTAL=true` is the defaul value, so you can skip it
 
 ```
 $ s2i build -e WAR_NAME=app.war -e INCREMENTAL=true --incremental git://github.com/example/openshift-tomcat-example sarcouy/s2i-tomcat:8.5-jdk8-mvn3.3.9 tomcattest
@@ -135,8 +135,8 @@ file inside your source code repository or add -e FOO=BAR to `s2i build -e FOO=B
 * INCREMENTAL
 
     This is a boolean :
-    Set as "true" it avoid removing .m2 in between two builds (but that makes heavier images). Must be used with `s2i build --incremental`
-    Default to false
+    Set it as "true" avoid removing .m2 between two builds (but that makes heavier images). Must be used with `s2i build --incremental`
+    Default to true
 
 * WAR_NAME
 

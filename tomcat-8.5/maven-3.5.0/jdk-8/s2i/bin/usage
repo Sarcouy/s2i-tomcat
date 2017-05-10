@@ -28,5 +28,6 @@ If you set the "--env INCREMENTAL=true" to s2i, the sources are kept in the buil
 to deploy to allow a reuse of sources and .m2 files, which is fast but the container can reach a size of several GiB.
 If you set the "--env INCREMENTAL=false" to s2i, the sources arn't kept in the builded container
 to deploy, it allows a more lightweight container for releases, but longer to build.
+-e INCREMENTAL has default value set to true (ready to use with --incremental)
 
 EOF

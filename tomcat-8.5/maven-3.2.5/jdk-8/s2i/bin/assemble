@@ -36,7 +36,7 @@ chmod -R g+rw $LOCAL_SOURCE_DIR
 if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 
   if [ -z "$INCREMENTAL" ]; then
-    export INCREMENTAL=false
+    export INCREMENTAL=true
   fi
 
   if [[ "$INCREMENTAL" = "true" ]]; then 
