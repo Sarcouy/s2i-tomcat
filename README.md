@@ -3,8 +3,8 @@ Tomcat - CentOS Docker image
 
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
-Supported tags and respective `Dockerfile` links
-========================================
+Supported tags and respective `Dockerfile` links for image [s2i-tomcat](https://hub.docker.com/r/sarcouy/s2i-tomcat/) 
+---------------
 
 * `6-jdk7-mvn3.2.5` [(tomcat-6/maven-3.2.5/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.2.5/jdk-7/Dockerfile)
 * `6-jdk7-mvn3.3.9` [(tomcat-6/maven-3.3.9/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.3.9/jdk-7/Dockerfile)
