@@ -135,7 +135,8 @@ file inside your source code repository or add -e FOO=BAR to `s2i build -e FOO=B
 * INCREMENTAL
 
     This is a boolean :
-    Set it as "true" avoid removing .m2 between two builds (but that makes heavier images). Must be used with `s2i build --incremental`
+    Set it "true" avoid removing .m2 between two builds (but that makes heavier images). Must be used with `s2i build --incremental`
+    If you don't want an incremental build, and a lighter docker image set `-e INCREMENTAL=false`
     Default to true
 
 * WAR_NAME
