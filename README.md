@@ -3,6 +3,27 @@ Tomcat - CentOS Docker image
 
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
+Supported tags and respective `Dockerfile` links
+========================================
+
+* `6-jdk7-mvn3.2.5` [(tomcat-6/maven-3.2.5/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.2.5/jdk-7/Dockerfile)
+* `6-jdk7-mvn3.3.9` [(tomcat-6/maven-3.3.9/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.3.9/jdk-7/Dockerfile)
+* `6-jdk8-mvn3.2.5` [(tomcat-6/maven-3.2.5/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.2.5/jdk-8/Dockerfile)
+* `6-jdk8-mvn3.3.9` [(tomcat-6/maven-3.3.9/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-6/maven-3.3.9/jdk-8/Dockerfile)
+* `7-jdk7-mvn3.2.5` [(tomcat-7/maven-3.2.5/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-7/maven-3.2.5/jdk-7/Dockerfile)
+* `7-jdk7-mvn3.3.9` [(tomcat-7/maven-3.3.9/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-7/maven-3.3.9/jdk-7/Dockerfile)
+* `7-jdk8-mvn3.2.5` [(tomcat-7/maven-3.2.5/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-7/maven-3.2.5/jdk-8/Dockerfile)
+* `7-jdk8-mvn3.3.9` [(tomcat-7/maven-3.3.9/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-7/maven-3.3.9/jdk-8/Dockerfile)
+* `8-jdk7-mvn3.2.5` [(tomcat-8/maven-3.2.5/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.2.5/jdk-7/Dockerfile)
+* `8-jdk7-mvn3.3.9` [(tomcat-8/maven-3.3.9/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.3.9/jdk-7/Dockerfile)
+* `8-jdk8-mvn3.2.5` [(tomcat-8/maven-3.2.5/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.2.5/jdk-8/Dockerfile)
+* `8-jdk8-mvn3.3.9` [(tomcat-8/maven-3.3.9/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.3.9/jdk-8/Dockerfile)
+* `8-jdk7-mvn3.5.0` [(tomcat-8/maven-3.5.0/jdk-7)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.5.0/jdk-7/Dockerfile)
+* `8-jdk8-mvn3.5.0` [(tomcat-8/maven-3.5.0/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8/maven-3.5.0/jdk-8/Dockerfile)
+* `8.5-jdk8-mvn3.2.5` [(tomcat-8.5/maven-3.2.5/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8.5/maven-3.2.5/jdk-8/Dockerfile)
+* `8.5-jdk8-mvn3.3.9` [(tomcat-8.5/maven-3.3.9/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8.5/maven-3.3.9/jdk-8/Dockerfile)
+* `8.5-jdk8-mvn3.5.0` [(tomcat-8.5/maven-3.5.0/jdk-8)](https://github.com/Sarcouy/s2i-tomcat/blob/master/tomcat-8.5/maven-3.5.0/jdk-8/Dockerfile)
+
 This repository contains the source for building various versions of
 the Tomcat application as a reproducible Docker image using
 [source-to-image](https://github.com/openshift/source-to-image).
